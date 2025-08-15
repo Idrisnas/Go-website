@@ -32,25 +32,7 @@ const slides = [
 ];
 
 // Custom arrow components
-const CustomPrevArrow = ({ onClick }) => (
-  <button
-    className="absolute top-5 left-1/2 -translate-x-1/2 z-10 bg-black/10 text-white p-2 rounded-full shadow-md 0 transition"
-    onClick={onClick}
-    aria-label="Previous Slide"
-  >
-    <AiOutlineArrowUp size={20} />
-  </button>
-);
 
-const CustomNextArrow = ({ onClick }) => (
-  <button
-    className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 bg-black/10 text-white p-2 rounded-full shadow-md  transition"
-    onClick={onClick}
-    aria-label="Next Slide"
-  >
-    <AiOutlineArrowDown size={20} />
-  </button>
-);
 
 const VerticalSlider = () => {
   const settings = {

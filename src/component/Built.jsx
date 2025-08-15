@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Typography from "./Typography";
-import { Link } from "react-router-dom";
-import Gocar from "../assets/Gocar.png";
 import MobileSection from "./MobileSection";
 
 
