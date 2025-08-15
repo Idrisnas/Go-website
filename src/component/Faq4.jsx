@@ -97,7 +97,7 @@ const Faq = () => {
           return (
             <div key={index}>
               <div
-                className={`bg-[#FDF4D4] py-6 px-8 flex justify-between items-center cursor-pointer transition-all duration-300 ${
+                className={`bg-[#FDF4D4] md:py-6 md:px-8 p-2 flex justify-between items-center cursor-pointer transition-all duration-300 ${
                   isOpen ? "rounded-t-lg" : "rounded-lg"
                 }`}
                 onClick={() => toggleFaq(index)}
@@ -113,7 +113,7 @@ const Faq = () => {
                 <div className="text-3xl font-bold">{isOpen ? "−" : "+"}</div>
               </div>
               {isOpen && (
-                <div className="bg-[#FBEBB0] p-9 rounded-b-lg">
+                <div className="bg-[#FBEBB0] md:p-9 rounded-b-lg p-2">
                   <Typography variant="faq2">{faq.answer}</Typography>
                 </div>
               )}

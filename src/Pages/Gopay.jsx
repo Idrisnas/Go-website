@@ -125,7 +125,7 @@ const Gopay = () => {
               to="/paybills"
               text="Pay Bills"
               variant="whiteWithIcons"
-              className="w-24 md:w-44 flex items-center justify-center"
+              className="w-28 md:w-44 flex items-center justify-center"
             />
           </div>
           <div className="flex flex-wrap items-b  md:items-end  gap-4  md:w-[45%] pl-12">
