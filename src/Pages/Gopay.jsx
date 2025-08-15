@@ -14,9 +14,9 @@ import airtime from "../assets/airtime.png";
 import cert from "../assets/cert.png";
 
 import secure from "../assets/secure.png";
+import Blue from "../assets/blue.png";
+
 import money from "../assets/moneypay.png";
-
-
 
 import FeatureSection from "../component/FeatureSection";
 import InfoCard from "../component/InfoCard";
@@ -31,30 +31,47 @@ const Gopay = () => {
   };
   return (
     <div>
-      <div className="relative bg-[#000000] flex flex-col items-center justify-center pt-36 overflow-hidden mb-12">
+      <div className="relative bg-[#000000] flex flex-col items-center justify-center md:pt-36  pt-16 overflow-hidden mb-12">
         <div className="w-full mt-10 space-y-8 flex flex-col items-center text-[#FFFFFF]  align-baseline">
-          {/* Title */}
-          <Typography variant="big" className="text-center">
-            GoPay – Pay Less. Get <br /> More.
-          </Typography>
+          <div className="hidden md:block">
+            {/* Title */}
+            <Typography variant="big" className="text-center">
+              GoPay – Pay Less. Get <br /> More.
+            </Typography>
 
-          {/* Description */}
-          <Typography
-            variant="body"
-            className="text-center mt-4 w-[967px] font-manrope font-bold "
-          >
-            Life’s too short for long queues, failed payments, and last-minute
-            panic. With GoPay, you can handle all your essential payments in one
-            smooth tap—fast, secure, and rewarding.
-          </Typography>
-          <Typography variant="body" className="text-center mt-4 w-[967px]  ">
-            From electricity bills to airtime, data subscriptions, cable TV, and
-            more, GoPay is your all-in-one digital wallet built right inside
-            GoApp—so your lifestyle keeps flowing, uninterrupted.
-          </Typography>
-
+            {/* Description */}
+            <Typography
+              variant="body"
+              className="text-center mt-4 md:w-[967px] font-manrope font-bold "
+            >
+              Life’s too short for long queues, failed payments, and last-minute
+              panic. With GoPay, you can handle all your essential payments in
+              one smooth tap—fast, secure, and rewarding.
+            </Typography>
+            <Typography
+              variant="body"
+              className="text-center mt-4 md:w-[967px]  "
+            >
+              From electricity bills to airtime, data subscriptions, cable TV,
+              and more, GoPay is your all-in-one digital wallet built right
+              inside GoApp—so your lifestyle keeps flowing, uninterrupted.
+            </Typography>
+          </div>
+          <div className="block md:hidden px-4">
+            <div className="flex items-center gap-1 justify-center">
+              <h1 className="text-[35.69px] font-sora font-extrabold">
+                Pay on the{" "}
+              </h1>
+              <img src={Blue} alt="" className="w-[70px]" />
+            </div>
+            <p className="font-manrope text-center text-[12px] font-normal text-[#FFFFFF]">
+              With Gopay, you can enjoy the convenience of handling all your
+              bills from one app. Our platform is designed to provide a secure
+              and reliable service.
+            </p>
+          </div>
           {/* Button */}
-          <div className="flex flex-col items-center gap-4 mt-9">
+          <div className="flex flex-col items-center gap-4 mt-9 ">
             <RoundedButton
               to={getStoreLink()}
               text="Download App"
@@ -62,7 +79,7 @@ const Gopay = () => {
               iconRight={iconRight}
               iconLeft={iconLeft}
             />
-            <img src={Default} alt="" />
+            <img src={Default} alt="" className="mb-32 md:mb-0 " />
           </div>
         </div>
 
@@ -70,12 +87,12 @@ const Gopay = () => {
         <img
           src={coin1}
           alt=""
-          className="absolute left-0 bottom-0  w-24 h-24"
+          className="absolute left-0 bottom-0 w-16 h-16 md:w-24 md:h-24"
         />
         <img
           src={coin2}
           alt=""
-          className="absolute right-0 bottom-0  w-24 h-24"
+          className="absolute right-0 bottom-0 w-16 h-16 md:w-24 md:h-24"
         />
       </div>
 
@@ -88,15 +105,17 @@ const Gopay = () => {
         />
       </div>
 
-      <div className=" bg-[#F5FAFF] h-[882px] py-10">
-        <div className="mx-auto max-w-6xl my-10 space-y-8 flex gap-4  h-full">
-          <div className="space-y-6 w-[55%]  flex flex-col  justify-center">
-            <h1 className="font-sora font-bold text-[120px] leading-[100%] tracking-[-0.04em]">
-              Your <span className="text-[#F3D248]">Bills,</span>{" "}
-            </h1>
-            <h1 className="font-sora font-bold text-[120px] leading-[100%] tracking-[-0.04em]">
-              Your <span className="text-[#0176FF]">Way</span>
-            </h1>
+      <div className=" bg-[#F5FAFF] md:h-[882px] md:py-10 pt-8">
+        <div className="mx-auto max-w-6xl md:my-10 space-y-8 flex flex-col md:flex-row gap-4  h-full  ">
+          <div className="md:space-y-14 space-y-4 md:w-[55%]  flex flex-col  justify-center items-center md:items-start px-6 md:px-0">
+            <div className="text-[40px]">
+              <h1 className="font-sora font-bold md:text-[120px] leading-[100%] tracking-[-0.04em]">
+                Your <span className="text-[#F3D248]">Bills,</span>{" "}
+              </h1>
+              <h1 className="font-sora font-bold md:text-[120px] leading-[100%] tracking-[-0.04em]">
+                Your <span className="text-[#0176FF]">Way</span>
+              </h1>{" "}
+            </div>
             <Typography variant="subheading">
               Life’s easier when you have choices. With Gocaby, pay your bills
               using your favorite method—whether it's a quick swipe of your card
@@ -106,10 +125,10 @@ const Gopay = () => {
               to="/paybills"
               text="Pay Bills"
               variant="whiteWithIcons"
-              className="w-44 flex items-center justify-center"
+              className="w-24 md:w-44 flex items-center justify-center"
             />
           </div>
-          <div className="flex flex-wrap items-end  gap-4  w-[45%]">
+          <div className="flex flex-wrap items-b  md:items-end  gap-4  md:w-[45%] pl-12">
             <img src={way} alt="" />
           </div>
         </div>
