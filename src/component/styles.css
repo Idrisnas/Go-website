@@ -1,0 +1,17 @@
+.slick-dots {
+  position: absolute !important;
+  top: 144% !important;          /* vertically center */
+  left: -27% !important;         /* adjust horizontal position */
+  transform: translateY(-50%) rotate(90deg); /* center vertically & rotate */
+  display: flex !important;
+  margin: 0 10px;
+  flex-direction: row;          /* now horizontal because of rotation */
+  gap: 0.5rem;
+  transform-origin: center;     /* rotate around center */
+}
+
+/* Highlight the active dot */
+.slick-dots li.slick-active div {
+  background-color: blue !important;
+  border-color: white !important;
+}
